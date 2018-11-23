@@ -163,6 +163,42 @@ class GameViewReactorSpec: QuickSpec {
                     ]
                 }
             }
+
+            context("when left action before right action") {
+                beforeEach {
+                    xs = testSchedule.createHotObservable(
+                        [next(250, .swipe(.left)),
+                         next(350, .swipe(.right))]
+                    )
+
+                    xs.flatMap { sut.mutate(action: $0) }
+                        .bind(to: observer)
+                        .disposed(by: disposeBag)
+                }
+
+                it("should move left at 250 and move right at 350") {
+                    testSchedule.start()
+                    expect(observer.events) == [
+                        next(250, .move(direction: .left, index: 2)),
+                        next(250, .move(direction: .left, index: 4)),
+                        next(250, .move(direction: .left, index: 3)),
+                        next(250, .merge(direction: .left, index: 2)),
+                        next(250, .merge(direction: .left, index: 4)),
+                        next(250, .move(direction: .left, index: 2)),
+                        next(250, .move(direction: .left, index: 4)),
+                        next(250, .move(direction: .left, index: 3)),
+
+                        next(350, .move(direction: .right, index: 3)),
+                        next(350, .move(direction: .right, index: 1)),
+                        next(350, .move(direction: .right, index: 2)),
+                        next(350, .merge(direction: .right, index: 3)),
+                        next(350, .merge(direction: .right, index: 1)),
+                        next(350, .move(direction: .right, index: 3)),
+                        next(350, .move(direction: .right, index: 1)),
+                        next(350, .move(direction: .right, index: 2)),
+                    ]
+                }
+            }
         }
     }
 }
