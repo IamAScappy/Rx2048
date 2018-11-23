@@ -1,4 +1,7 @@
 PODS:
+  - Deli (0.6.2):
+    - DeliBinary (~> 0.6.2)
+  - DeliBinary (0.6.2)
   - Gradients (0.2.1)
   - Nimble (7.3.1)
   - Quick (1.3.2)
@@ -26,6 +29,7 @@ PODS:
     - RxSwift (~> 4.0)
 
 DEPENDENCIES:
+  - Deli (= 0.6.2)
   - Gradients (= 0.2.1)
   - Nimble (= 7.3.1)
   - Quick (= 1.3.2)
@@ -39,6 +43,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Deli
+    - DeliBinary
     - Gradients
     - Nimble
     - Quick
@@ -51,6 +57,8 @@ SPEC REPOS:
     - RxSwiftExt
 
 SPEC CHECKSUMS:
+  Deli: a89188ee00255c8c43f6376cbd39adef5d764ab7
+  DeliBinary: fa5a32891905e05281ea737b3b2eba01098b02d8
   Gradients: b8b4ace9a5551a39e9bba2cc5a1de10dbe1eee46
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
@@ -62,6 +70,6 @@ SPEC CHECKSUMS:
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   RxSwiftExt: 81afb48ab0602f503147417baeb3989d64c7687d
 
-PODFILE CHECKSUM: 90c8e0db93eee27ff82b9b25f60d5abcee38c232
+PODFILE CHECKSUM: 93b93f7b4ad54624d3ab59d376a9dbe35fcdd659
 
 COCOAPODS: 1.6.0.beta.2

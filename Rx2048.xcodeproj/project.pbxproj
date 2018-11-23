@@ -74,7 +74,6 @@
 				250BE62F2B793CDAEE3E73AF /* Pods-Rx2048-Rx2048Tests.debug.xcconfig */,
 				CBDC98D9ADC69FC2BCAF86C0 /* Pods-Rx2048-Rx2048Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +111,7 @@
 			children = (
 				FC8C2CC721A840A1003837CF /* AppDelegate.swift */,
 				FC8C2CC921A840A1003837CF /* ViewController.swift */,
+				FC8C2CE721A84173003837CF /* Game */,
 				FC8C2CCB21A840A1003837CF /* Main.storyboard */,
 				FC8C2CCE21A840A2003837CF /* Assets.xcassets */,
 				FC8C2CD021A840A2003837CF /* LaunchScreen.storyboard */,
@@ -124,9 +124,24 @@
 			isa = PBXGroup;
 			children = (
 				FC8C2CDC21A840A2003837CF /* Rx2048Tests.swift */,
+				FC8C2CEE21A841DF003837CF /* Game */,
 				FC8C2CDE21A840A2003837CF /* Info.plist */,
 			);
 			path = Rx2048Tests;
+			sourceTree = "<group>";
+		};
+		FC8C2CE721A84173003837CF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		FC8C2CEE21A841DF003837CF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +254,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Rx2048-Rx2048Tests/Pods-Rx2048-Rx2048Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Deli/Deli.framework",
 				"${BUILT_PRODUCTS_DIR}/Gradients/Gradients.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAnimated/RxAnimated.framework",
@@ -254,6 +270,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Deli.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gradients.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAnimated.framework",
@@ -301,6 +318,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Rx2048/Pods-Rx2048-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Deli/Deli.framework",
 				"${BUILT_PRODUCTS_DIR}/Gradients/Gradients.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAnimated/RxAnimated.framework",
@@ -314,6 +332,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Deli.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gradients.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAnimated.framework",

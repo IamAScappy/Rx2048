@@ -4,6 +4,9 @@ inhibit_all_warnings!
 target 'Rx2048' do
   use_frameworks!
 
+  # DI
+  pod 'Deli', '0.6.2'
+
   # Architecture
   pod 'ReactorKit', '1.2.1'
 
