@@ -111,6 +111,58 @@ class GameViewReactorSpec: QuickSpec {
                     ]
                 }
             }
+
+            context("when right action once") {
+                beforeEach {
+                    xs = testSchedule.createHotObservable(
+                        [next(250, .swipe(.right))]
+                    )
+
+                    xs.flatMap { sut.mutate(action: $0) }
+                        .bind(to: observer)
+                        .disposed(by: disposeBag)
+                }
+
+                it("should move right 3 -> 1 -> 2, merge 3 -> 1 and move right 3 -> 1 -> 2") {
+                    testSchedule.start()
+                    expect(observer.events) == [
+                        next(250, .move(direction: .right, index: 3)),
+                        next(250, .move(direction: .right, index: 1)),
+                        next(250, .move(direction: .right, index: 2)),
+                        next(250, .merge(direction: .right, index: 3)),
+                        next(250, .merge(direction: .right, index: 1)),
+                        next(250, .move(direction: .right, index: 3)),
+                        next(250, .move(direction: .right, index: 1)),
+                        next(250, .move(direction: .right, index: 2)),
+                    ]
+                }
+            }
+
+            context("when right action once") {
+                beforeEach {
+                    xs = testSchedule.createHotObservable(
+                        [next(250, .swipe(.down))]
+                    )
+
+                    xs.flatMap { sut.mutate(action: $0) }
+                        .bind(to: observer)
+                        .disposed(by: disposeBag)
+                }
+
+                it("should move down 3 -> 1 -> 2, merge 3 -> 1 and move down 3 -> 1 -> 2") {
+                    testSchedule.start()
+                    expect(observer.events) == [
+                        next(250, .move(direction: .down, index: 3)),
+                        next(250, .move(direction: .down, index: 1)),
+                        next(250, .move(direction: .down, index: 2)),
+                        next(250, .merge(direction: .down, index: 3)),
+                        next(250, .merge(direction: .down, index: 1)),
+                        next(250, .move(direction: .down, index: 3)),
+                        next(250, .move(direction: .down, index: 1)),
+                        next(250, .move(direction: .down, index: 2)),
+                    ]
+                }
+            }
         }
     }
 }

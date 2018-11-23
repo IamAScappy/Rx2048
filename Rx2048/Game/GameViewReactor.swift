@@ -48,9 +48,16 @@ class GameViewReactor: Reactor, Autowired {
         case .startGame:
             return Observable.of(.clear, .create, .create)
         case .swipe(let direction):
-            let move = [2,4,3].map { Mutation.move(direction: direction, index: $0) }
-            let merge = [2,4].map { Mutation.merge(direction: direction, index: $0) }
-            return Observable.from(move + merge + move)
+            switch direction {
+            case .down, .right:
+                let move = [3,1,2].map { Mutation.move(direction: direction, index: $0) }
+                let merge = [3,1].map { Mutation.merge(direction: direction, index: $0) }
+                return Observable.from(move + merge + move)
+            case .up, .left:
+                let move = [2,4,3].map { Mutation.move(direction: direction, index: $0) }
+                let merge = [2,4].map { Mutation.merge(direction: direction, index: $0) }
+                return Observable.from(move + merge + move)
+            }
         }
     }
 
