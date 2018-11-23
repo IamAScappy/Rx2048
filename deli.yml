@@ -1,0 +1,9 @@
+target:
+  - Rx2048
+
+config:
+  Rx2048:
+    project: Rx2048
+    scheme: Rx2048
+    className: DeliFactory
+    output: Rx2048/DeliFactory.swift
