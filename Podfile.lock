@@ -1,0 +1,67 @@
+PODS:
+  - Gradients (0.2.1)
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - ReactorKit (1.2.1):
+    - RxSwift (>= 4.0.0)
+  - RxAnimated (0.5.0):
+    - RxAnimated/Core (= 0.5.0)
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - RxAnimated/Core (0.5.0):
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxGesture (2.0.1):
+    - RxCocoa (~> 4.3.1)
+    - RxSwift (~> 4.3.1)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - RxSwiftExt (3.3.0):
+    - RxSwiftExt/Core (= 3.3.0)
+  - RxSwiftExt/Core (3.3.0):
+    - RxSwift (~> 4.0)
+
+DEPENDENCIES:
+  - Gradients (= 0.2.1)
+  - Nimble (= 7.3.1)
+  - Quick (= 1.3.2)
+  - ReactorKit (= 1.2.1)
+  - RxAnimated (= 0.5.0)
+  - RxCocoa (= 4.3.1)
+  - RxGesture (= 2.0.1)
+  - RxOptional (= 3.5.0)
+  - RxSwift (= 4.3.1)
+  - RxSwiftExt (= 3.3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Gradients
+    - Nimble
+    - Quick
+    - ReactorKit
+    - RxAnimated
+    - RxCocoa
+    - RxGesture
+    - RxOptional
+    - RxSwift
+    - RxSwiftExt
+
+SPEC CHECKSUMS:
+  Gradients: b8b4ace9a5551a39e9bba2cc5a1de10dbe1eee46
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
+  RxAnimated: 57a731e59557219480fb3dd86d965d977d863fc6
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxGesture: 26ede4ed13ffc6336d29dbd9a8dff229bdb72de7
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxSwiftExt: 81afb48ab0602f503147417baeb3989d64c7687d
+
+PODFILE CHECKSUM: 90c8e0db93eee27ff82b9b25f60d5abcee38c232
+
+COCOAPODS: 1.6.0.beta.2
