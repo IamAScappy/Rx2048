@@ -44,7 +44,14 @@ class GameViewReactor: Reactor, Autowired {
     var initialState: State = State()
 
     func mutate(action: Action) -> Observable<Mutation> {
-        return Observable.of(.clear, .create, .create)
+        switch action {
+        case .startGame:
+            return Observable.of(.clear, .create, .create)
+        case .swipe(let direction):
+            let move = [2,4,3].map { Mutation.move(direction: direction, index: $0) }
+            let merge = [2,4].map { Mutation.merge(direction: direction, index: $0) }
+            return Observable.from(move + merge + move)
+        }
     }
 
     func reduce(state: State, mutation: Mutation) -> State {
