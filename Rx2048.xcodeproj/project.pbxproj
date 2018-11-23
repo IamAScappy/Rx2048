@@ -15,6 +15,8 @@
 		FC8C2CCF21A840A2003837CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8C2CCE21A840A2003837CF /* Assets.xcassets */; };
 		FC8C2CD221A840A2003837CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C2CD021A840A2003837CF /* LaunchScreen.storyboard */; };
 		FC8C2CDD21A840A2003837CF /* Rx2048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CDC21A840A2003837CF /* Rx2048Tests.swift */; };
+		FC8C2CF221A843EE003837CF /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CF121A843EE003837CF /* GameViewModel.swift */; };
+		FC8C2CF421A843F5003837CF /* GameViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CF321A843F5003837CF /* GameViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		FC8C2CD821A840A2003837CF /* Rx2048Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rx2048Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C2CDC21A840A2003837CF /* Rx2048Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx2048Tests.swift; sourceTree = "<group>"; };
 		FC8C2CDE21A840A2003837CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8C2CF121A843EE003837CF /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		FC8C2CF321A843F5003837CF /* GameViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModelSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		FC8C2CE721A84173003837CF /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C2CF121A843EE003837CF /* GameViewModel.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 		FC8C2CEE21A841DF003837CF /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C2CF321A843F5003837CF /* GameViewModelSpec.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8C2CF221A843EE003837CF /* GameViewModel.swift in Sources */,
 				FC8C2CCA21A840A1003837CF /* ViewController.swift in Sources */,
 				FC8C2CC821A840A1003837CF /* AppDelegate.swift in Sources */,
 			);
@@ -386,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8C2CDD21A840A2003837CF /* Rx2048Tests.swift in Sources */,
+				FC8C2CF421A843F5003837CF /* GameViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
