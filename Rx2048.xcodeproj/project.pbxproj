@@ -18,6 +18,8 @@
 		FC8C2CF221A843EE003837CF /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CF121A843EE003837CF /* GameViewModel.swift */; };
 		FC8C2CF421A843F5003837CF /* GameViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CF321A843F5003837CF /* GameViewModelSpec.swift */; };
 		FC8C2CF621A84552003837CF /* GameViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CF521A84551003837CF /* GameViewReactor.swift */; };
+		FC8C2CFA21A8467E003837CF /* GameViewReactorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CF921A8467E003837CF /* GameViewReactorSpec.swift */; };
+		FC8C2CFD21A84E23003837CF /* DeliFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CFC21A84E23003837CF /* DeliFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		FC8C2CF121A843EE003837CF /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		FC8C2CF321A843F5003837CF /* GameViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModelSpec.swift; sourceTree = "<group>"; };
 		FC8C2CF521A84551003837CF /* GameViewReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewReactor.swift; sourceTree = "<group>"; };
+		FC8C2CF921A8467E003837CF /* GameViewReactorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewReactorSpec.swift; sourceTree = "<group>"; };
+		FC8C2CFC21A84E23003837CF /* DeliFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		FC8C2CC621A840A1003837CF /* Rx2048 */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C2CFC21A84E23003837CF /* DeliFactory.swift */,
 				FC8C2CC721A840A1003837CF /* AppDelegate.swift */,
 				FC8C2CC921A840A1003837CF /* ViewController.swift */,
 				FC8C2CE721A84173003837CF /* Game */,
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FC8C2CF321A843F5003837CF /* GameViewModelSpec.swift */,
+				FC8C2CF921A8467E003837CF /* GameViewReactorSpec.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 				FC8C2CC121A840A1003837CF /* Frameworks */,
 				FC8C2CC221A840A1003837CF /* Resources */,
 				D21D985F459A80544FCC49A5 /* [CP] Embed Pods Frameworks */,
+				FC8C2CFB21A84CF3003837CF /* Deli */,
 			);
 			buildRules = (
 			);
@@ -274,6 +281,9 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -290,6 +300,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -378,6 +391,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FC8C2CFB21A84CF3003837CF /* Deli */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Deli;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/DeliBinary/deli\" \"build\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -387,6 +418,7 @@
 			files = (
 				FC8C2CF221A843EE003837CF /* GameViewModel.swift in Sources */,
 				FC8C2CF621A84552003837CF /* GameViewReactor.swift in Sources */,
+				FC8C2CFD21A84E23003837CF /* DeliFactory.swift in Sources */,
 				FC8C2CCA21A840A1003837CF /* ViewController.swift in Sources */,
 				FC8C2CC821A840A1003837CF /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8C2CDD21A840A2003837CF /* Rx2048Tests.swift in Sources */,
+				FC8C2CFA21A8467E003837CF /* GameViewReactorSpec.swift in Sources */,
 				FC8C2CF421A843F5003837CF /* GameViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
