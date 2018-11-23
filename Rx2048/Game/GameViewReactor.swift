@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Deli
 import RxCocoa
 import RxSwift
 import ReactorKit
 
-class GameViewReactor: Reactor {
+class GameViewReactor: Reactor, Autowired {
+
+    // MARK: - Deli
+
+    var scope: Scope = .prototype
+
     enum Direction {
         case up
         case down
@@ -24,7 +30,7 @@ class GameViewReactor: Reactor {
         case swipe(Direction)
     }
 
-    enum Mutation {
+    enum Mutation: Equatable {
         case create
         case clear
         case move(direction: Direction, index: Int)
@@ -38,10 +44,14 @@ class GameViewReactor: Reactor {
     var initialState: State = State()
 
     func mutate(action: Action) -> Observable<Mutation> {
-        return Observable.just(.create)
+        return Observable.of(.clear, .create, .create)
     }
 
     func reduce(state: State, mutation: Mutation) -> State {
         return state
+    }
+
+    required init() {
+
     }
 }
