@@ -46,6 +46,18 @@ class GameViewModelSpec: QuickSpec {
                     expect(sut.number) == "1024"
                 }
             }
+
+            context("has level 1 ~ 100") {
+                (1...100).forEach { level in
+                    beforeEach {
+                        sut = Tile(id: NSUUID().uuidString, level: level)
+                    }
+
+                    it("\(level) level should has backgroundLayer") {
+                        expect(sut.backgroundLayer).toNot(beNil())
+                    }
+                }
+            }
         }
     }
 }
