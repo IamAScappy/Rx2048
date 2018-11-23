@@ -25,5 +25,7 @@ target 'Rx2048' do
     inherit! :complete
     pod 'Quick', '1.3.2'
     pod 'Nimble', '7.3.1'
+    pod 'RxTest', '4.4.0'
+    pod 'RxBlocking', '4.4.0'
   end
 end
