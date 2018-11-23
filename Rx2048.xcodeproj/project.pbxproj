@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A2FEF482A71C95024B6B5E8 /* Pods_Rx2048_Rx2048Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26236E20A28FB802B19BD7E /* Pods_Rx2048_Rx2048Tests.framework */; };
+		B604A7198B5B68CD155BF632 /* Pods_Rx2048.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022249ED6AC2490A34DE912 /* Pods_Rx2048.framework */; };
+		FC8C2CC821A840A1003837CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CC721A840A1003837CF /* AppDelegate.swift */; };
+		FC8C2CCA21A840A1003837CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CC921A840A1003837CF /* ViewController.swift */; };
+		FC8C2CCD21A840A1003837CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C2CCB21A840A1003837CF /* Main.storyboard */; };
+		FC8C2CCF21A840A2003837CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8C2CCE21A840A2003837CF /* Assets.xcassets */; };
+		FC8C2CD221A840A2003837CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C2CD021A840A2003837CF /* LaunchScreen.storyboard */; };
+		FC8C2CDD21A840A2003837CF /* Rx2048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C2CDC21A840A2003837CF /* Rx2048Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC8C2CD921A840A2003837CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC8C2CBC21A840A1003837CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC8C2CC321A840A1003837CF;
+			remoteInfo = Rx2048;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		250BE62F2B793CDAEE3E73AF /* Pods-Rx2048-Rx2048Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx2048-Rx2048Tests.debug.xcconfig"; path = "Target Support Files/Pods-Rx2048-Rx2048Tests/Pods-Rx2048-Rx2048Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3078A5AE593E20AE32D6069 /* Pods-Rx2048.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx2048.debug.xcconfig"; path = "Target Support Files/Pods-Rx2048/Pods-Rx2048.debug.xcconfig"; sourceTree = "<group>"; };
+		CBDC98D9ADC69FC2BCAF86C0 /* Pods-Rx2048-Rx2048Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx2048-Rx2048Tests.release.xcconfig"; path = "Target Support Files/Pods-Rx2048-Rx2048Tests/Pods-Rx2048-Rx2048Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D022249ED6AC2490A34DE912 /* Pods_Rx2048.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx2048.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26236E20A28FB802B19BD7E /* Pods_Rx2048_Rx2048Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx2048_Rx2048Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E601BB26593AFB8BFF596EAB /* Pods-Rx2048.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx2048.release.xcconfig"; path = "Target Support Files/Pods-Rx2048/Pods-Rx2048.release.xcconfig"; sourceTree = "<group>"; };
+		FC8C2CC421A840A1003837CF /* Rx2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8C2CC721A840A1003837CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC8C2CC921A840A1003837CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC8C2CCC21A840A1003837CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC8C2CCE21A840A2003837CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC8C2CD121A840A2003837CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC8C2CD321A840A2003837CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8C2CD821A840A2003837CF /* Rx2048Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rx2048Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8C2CDC21A840A2003837CF /* Rx2048Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx2048Tests.swift; sourceTree = "<group>"; };
+		FC8C2CDE21A840A2003837CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC8C2CC121A840A1003837CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B604A7198B5B68CD155BF632 /* Pods_Rx2048.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8C2CD521A840A2003837CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2FEF482A71C95024B6B5E8 /* Pods_Rx2048_Rx2048Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C9C0184477862D018CD22C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3078A5AE593E20AE32D6069 /* Pods-Rx2048.debug.xcconfig */,
+				E601BB26593AFB8BFF596EAB /* Pods-Rx2048.release.xcconfig */,
+				250BE62F2B793CDAEE3E73AF /* Pods-Rx2048-Rx2048Tests.debug.xcconfig */,
+				CBDC98D9ADC69FC2BCAF86C0 /* Pods-Rx2048-Rx2048Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		281551CB53C1376740E04317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D022249ED6AC2490A34DE912 /* Pods_Rx2048.framework */,
+				D26236E20A28FB802B19BD7E /* Pods_Rx2048_Rx2048Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC8C2CBB21A840A1003837CF = {
+			isa = PBXGroup;
+			children = (
+				FC8C2CC621A840A1003837CF /* Rx2048 */,
+				FC8C2CDB21A840A2003837CF /* Rx2048Tests */,
+				FC8C2CC521A840A1003837CF /* Products */,
+				1C9C0184477862D018CD22C3 /* Pods */,
+				281551CB53C1376740E04317 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC8C2CC521A840A1003837CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2CC421A840A1003837CF /* Rx2048.app */,
+				FC8C2CD821A840A2003837CF /* Rx2048Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC8C2CC621A840A1003837CF /* Rx2048 */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2CC721A840A1003837CF /* AppDelegate.swift */,
+				FC8C2CC921A840A1003837CF /* ViewController.swift */,
+				FC8C2CCB21A840A1003837CF /* Main.storyboard */,
+				FC8C2CCE21A840A2003837CF /* Assets.xcassets */,
+				FC8C2CD021A840A2003837CF /* LaunchScreen.storyboard */,
+				FC8C2CD321A840A2003837CF /* Info.plist */,
+			);
+			path = Rx2048;
+			sourceTree = "<group>";
+		};
+		FC8C2CDB21A840A2003837CF /* Rx2048Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C2CDC21A840A2003837CF /* Rx2048Tests.swift */,
+				FC8C2CDE21A840A2003837CF /* Info.plist */,
+			);
+			path = Rx2048Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC8C2CC321A840A1003837CF /* Rx2048 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8C2CE121A840A2003837CF /* Build configuration list for PBXNativeTarget "Rx2048" */;
+			buildPhases = (
+				D267292AEDAF01C373433A87 /* [CP] Check Pods Manifest.lock */,
+				FC8C2CC021A840A1003837CF /* Sources */,
+				FC8C2CC121A840A1003837CF /* Frameworks */,
+				FC8C2CC221A840A1003837CF /* Resources */,
+				D21D985F459A80544FCC49A5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rx2048;
+			productName = Rx2048;
+			productReference = FC8C2CC421A840A1003837CF /* Rx2048.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC8C2CD721A840A2003837CF /* Rx2048Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8C2CE421A840A2003837CF /* Build configuration list for PBXNativeTarget "Rx2048Tests" */;
+			buildPhases = (
+				AD4FCCFB08E65012EA280BC6 /* [CP] Check Pods Manifest.lock */,
+				FC8C2CD421A840A2003837CF /* Sources */,
+				FC8C2CD521A840A2003837CF /* Frameworks */,
+				FC8C2CD621A840A2003837CF /* Resources */,
+				3F68E2C64DD5060590F9C110 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC8C2CDA21A840A2003837CF /* PBXTargetDependency */,
+			);
+			name = Rx2048Tests;
+			productName = Rx2048Tests;
+			productReference = FC8C2CD821A840A2003837CF /* Rx2048Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC8C2CBC21A840A1003837CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Cruz;
+				TargetAttributes = {
+					FC8C2CC321A840A1003837CF = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					FC8C2CD721A840A2003837CF = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FC8C2CC321A840A1003837CF;
+					};
+				};
+			};
+			buildConfigurationList = FC8C2CBF21A840A1003837CF /* Build configuration list for PBXProject "Rx2048" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC8C2CBB21A840A1003837CF;
+			productRefGroup = FC8C2CC521A840A1003837CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC8C2CC321A840A1003837CF /* Rx2048 */,
+				FC8C2CD721A840A2003837CF /* Rx2048Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC8C2CC221A840A1003837CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8C2CD221A840A2003837CF /* LaunchScreen.storyboard in Resources */,
+				FC8C2CCF21A840A2003837CF /* Assets.xcassets in Resources */,
+				FC8C2CCD21A840A1003837CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8C2CD621A840A2003837CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F68E2C64DD5060590F9C110 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx2048-Rx2048Tests/Pods-Rx2048-Rx2048Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gradients/Gradients.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAnimated/RxAnimated.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gradients.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAnimated.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx2048-Rx2048Tests/Pods-Rx2048-Rx2048Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD4FCCFB08E65012EA280BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx2048-Rx2048Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D21D985F459A80544FCC49A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx2048/Pods-Rx2048-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gradients/Gradients.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAnimated/RxAnimated.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gradients.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAnimated.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx2048/Pods-Rx2048-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D267292AEDAF01C373433A87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx2048-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC8C2CC021A840A1003837CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8C2CCA21A840A1003837CF /* ViewController.swift in Sources */,
+				FC8C2CC821A840A1003837CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8C2CD421A840A2003837CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8C2CDD21A840A2003837CF /* Rx2048Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC8C2CDA21A840A2003837CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC8C2CC321A840A1003837CF /* Rx2048 */;
+			targetProxy = FC8C2CD921A840A2003837CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC8C2CCB21A840A1003837CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC8C2CCC21A840A1003837CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC8C2CD021A840A2003837CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC8C2CD121A840A2003837CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC8C2CDF21A840A2003837CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC8C2CE021A840A2003837CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC8C2CE221A840A2003837CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3078A5AE593E20AE32D6069 /* Pods-Rx2048.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Rx2048/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cruz.Rx2048;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC8C2CE321A840A2003837CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E601BB26593AFB8BFF596EAB /* Pods-Rx2048.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Rx2048/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cruz.Rx2048;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC8C2CE521A840A2003837CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 250BE62F2B793CDAEE3E73AF /* Pods-Rx2048-Rx2048Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Rx2048Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cruz.Rx2048Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx2048.app/Rx2048";
+			};
+			name = Debug;
+		};
+		FC8C2CE621A840A2003837CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDC98D9ADC69FC2BCAF86C0 /* Pods-Rx2048-Rx2048Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Rx2048Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cruz.Rx2048Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx2048.app/Rx2048";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC8C2CBF21A840A1003837CF /* Build configuration list for PBXProject "Rx2048" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8C2CDF21A840A2003837CF /* Debug */,
+				FC8C2CE021A840A2003837CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC8C2CE121A840A2003837CF /* Build configuration list for PBXNativeTarget "Rx2048" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8C2CE221A840A2003837CF /* Debug */,
+				FC8C2CE321A840A2003837CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC8C2CE421A840A2003837CF /* Build configuration list for PBXNativeTarget "Rx2048Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8C2CE521A840A2003837CF /* Debug */,
+				FC8C2CE621A840A2003837CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC8C2CBC21A840A1003837CF /* Project object */;
+}
