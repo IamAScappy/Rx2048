@@ -38,7 +38,7 @@ class GameViewReactor: Reactor, Autowired {
     }
 
     struct State {
-        var tiles: [Tile?] = Array<Tile?>(repeating: nil, count: 16)
+        var tiles: [Tile] = Array<Tile>(repeating: .empty, count: 16)
     }
 
     var initialState: State = State()
@@ -50,19 +50,40 @@ class GameViewReactor: Reactor, Autowired {
         case .swipe(let direction):
             switch direction {
             case .down, .right:
-                let move = [3,1,2].map { Mutation.move(direction: direction, index: $0) }
-                let merge = [3,1].map { Mutation.merge(direction: direction, index: $0) }
+                let move = [2, 0, 1].map { Mutation.move(direction: direction, index: $0) }
+                let merge = [2, 0].map { Mutation.merge(direction: direction, index: $0) }
                 return Observable.from(move + merge + move)
             case .up, .left:
-                let move = [2,4,3].map { Mutation.move(direction: direction, index: $0) }
-                let merge = [2,4].map { Mutation.merge(direction: direction, index: $0) }
+                let move = [1, 3, 2].map { Mutation.move(direction: direction, index: $0) }
+                let merge = [1, 3].map { Mutation.merge(direction: direction, index: $0) }
                 return Observable.from(move + merge + move)
             }
         }
     }
 
     func reduce(state: State, mutation: Mutation) -> State {
-        return state
+        var newState = state
+        switch mutation {
+        case .create:
+            break
+        case .clear:
+            break
+        case .move(let direction, let index):
+            switch direction {
+            case .right:
+                for row in 0...3 {
+                    if newState.tiles[row * 4 + index + 1] == .empty, newState.tiles[row * 4 + index] != .empty {
+                        newState.tiles[row * 4 + index + 1] = newState.tiles[row * 4 + index]
+                        newState.tiles[row * 4 + index] = .empty
+                    }
+                }
+            case .left, .up, .down:
+                break
+            }
+        case .merge(let direction, let index):
+            break
+        }
+        return newState
     }
 
     required init() {

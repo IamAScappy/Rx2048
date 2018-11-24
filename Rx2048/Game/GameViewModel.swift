@@ -9,12 +9,14 @@
 import UIKit
 import Gradients
 
-struct Tile {
+struct Tile: Equatable {
     var id: String
     var level: Int
 }
 
 extension Tile {
+    static let empty = Tile(id: "", level: 0)
+
     var number: String {
         return "\(2 << max(level - 1, 0))"
     }
