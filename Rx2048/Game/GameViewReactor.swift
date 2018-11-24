@@ -67,7 +67,7 @@ class GameViewReactor: Reactor, Autowired {
         case .create:
             break
         case .clear:
-            break
+            newState.tiles = Array<Tile>(repeating: .empty, count: 16)
         case .move(let direction, let index):
             switch direction {
             case .right:
@@ -98,7 +98,6 @@ class GameViewReactor: Reactor, Autowired {
                         newState.tiles[column + index * 4] = .empty
                     }
                 }
-                break
             default:
                 break
             }

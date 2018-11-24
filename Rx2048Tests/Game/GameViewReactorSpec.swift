@@ -298,6 +298,20 @@ class GameViewReactorSpec: QuickSpec {
                                     1, 0, 0, 0]
                         }
                     }
+
+                    context("when reduce clear") {
+                        beforeEach {
+                            state = sut.reduce(state: state, mutation: .clear)
+                        }
+
+                        it("all tiles should be empty") {
+                            expect(state.tiles.map { $0.level })
+                                == [0, 0, 0, 0,
+                                    0, 0, 0, 0,
+                                    0, 0, 0, 0,
+                                    0, 0, 0, 0]
+                        }
+                    }
                 }
             }
         }
