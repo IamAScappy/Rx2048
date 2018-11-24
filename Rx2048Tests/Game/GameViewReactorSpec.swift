@@ -254,20 +254,34 @@ class GameViewReactorSpec: QuickSpec {
                                         0, 0, 0, 0,
                                         1, 0, 0, 0]
                             }
+                        }
+                    }
 
-                            context("when reduce with move left index 0 once") {
-                                beforeEach {
-                                    state = sut.reduce(state: state, mutation: .move(direction: .left, index: 0))
-                                }
+                    context("when reduce with move left index 0 once") {
+                        beforeEach {
+                            state = sut.reduce(state: state, mutation: .move(direction: .left, index: 0))
+                        }
 
-                                it("result should be moved left once") {
-                                    expect(state.tiles.map { $0.level })
-                                        == [1, 0, 0, 0,
-                                            0, 0, 0, 0,
-                                            0, 0, 0, 0,
-                                            1, 0, 0, 0]
-                                }
-                            }
+                        it("result should be moved left once") {
+                            expect(state.tiles.map { $0.level })
+                                == [1, 0, 0, 0,
+                                    0, 0, 0, 0,
+                                    0, 0, 0, 0,
+                                    1, 0, 0, 0]
+                        }
+                    }
+
+                    context("when reduce with move up index 3") {
+                        beforeEach {
+                            state = sut.reduce(state: state, mutation: .move(direction: .up, index: 3))
+                        }
+
+                        it("result should be moved up once") {
+                            expect(state.tiles.map { $0.level })
+                                == [1, 0, 0, 0,
+                                    0, 0, 0, 0,
+                                    1, 0, 0, 0,
+                                    0, 0, 0, 0]
                         }
                     }
                 }
