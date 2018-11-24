@@ -241,6 +241,34 @@ class GameViewReactorSpec: QuickSpec {
                                         0, 0, 1, 0]
                             }
                         }
+
+                        context("when reduce with move left index 1 once") {
+                            beforeEach {
+                                state = sut.reduce(state: state, mutation: .move(direction: .left, index: 1))
+                            }
+
+                            it("result should be moved left once") {
+                                expect(state.tiles.map { $0.level })
+                                    == [1, 0, 0, 0,
+                                        0, 0, 0, 0,
+                                        0, 0, 0, 0,
+                                        1, 0, 0, 0]
+                            }
+
+                            context("when reduce with move left index 0 once") {
+                                beforeEach {
+                                    state = sut.reduce(state: state, mutation: .move(direction: .left, index: 0))
+                                }
+
+                                it("result should be moved left once") {
+                                    expect(state.tiles.map { $0.level })
+                                        == [1, 0, 0, 0,
+                                            0, 0, 0, 0,
+                                            0, 0, 0, 0,
+                                            1, 0, 0, 0]
+                                }
+                            }
+                        }
                     }
                 }
             }

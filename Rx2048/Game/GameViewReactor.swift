@@ -77,7 +77,16 @@ class GameViewReactor: Reactor, Autowired {
                         newState.tiles[row * 4 + index] = .empty
                     }
                 }
-            case .left, .up, .down:
+            case .left where index > 0:
+                for row in 0...3 {
+                    if newState.tiles[row * 4 + index - 1] == .empty, newState.tiles[row * 4 + index] != .empty {
+                        newState.tiles[row * 4 + index - 1] = newState.tiles[row * 4 + index]
+                        newState.tiles[row * 4 + index] = .empty
+                    }
+                }
+            case .up, .down:
+                break
+            default:
                 break
             }
         case .merge(let direction, let index):
