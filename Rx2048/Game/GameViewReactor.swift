@@ -92,6 +92,12 @@ class GameViewReactor: Reactor, Autowired {
                     }
                 }
             case .down:
+                for column in 0...3 {
+                    if newState.tiles[column + (index + 1) * 4] == .empty, newState.tiles[column + index * 4] != .empty {
+                        newState.tiles[column + (index + 1) * 4] = newState.tiles[column + index * 4]
+                        newState.tiles[column + index * 4] = .empty
+                    }
+                }
                 break
             default:
                 break

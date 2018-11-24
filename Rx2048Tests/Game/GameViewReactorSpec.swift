@@ -284,6 +284,20 @@ class GameViewReactorSpec: QuickSpec {
                                     0, 0, 0, 0]
                         }
                     }
+
+                    context("when reduce with move down index 0") {
+                        beforeEach {
+                            state = sut.reduce(state: state, mutation: .move(direction: .down, index: 0))
+                        }
+
+                        it("result should be moved down once") {
+                            expect(state.tiles.map { $0.level })
+                                == [0, 0, 0, 0,
+                                    1, 0, 0, 0,
+                                    0, 0, 0, 0,
+                                    1, 0, 0, 0]
+                        }
+                    }
                 }
             }
         }
