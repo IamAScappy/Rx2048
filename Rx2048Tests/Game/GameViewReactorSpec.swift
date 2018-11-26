@@ -334,6 +334,7 @@ class GameViewReactorSpec: QuickSpec {
                                     0, 2, 1, 1,
                                     0, 2, 1, 1,
                                     0, 2, 1, 1]
+                            expect(state.score) == 16
                         }
 
                         context("and reduce with merge right index 2") {
@@ -347,6 +348,7 @@ class GameViewReactorSpec: QuickSpec {
                                         0, 2, 0, 2,
                                         0, 2, 0, 2,
                                         0, 2, 0, 2]
+                                expect(state.score) == 32
                             }
 
                             context("when reduce with merge up index 3") {
@@ -360,6 +362,7 @@ class GameViewReactorSpec: QuickSpec {
                                             0, 2, 0, 2,
                                             0, 3, 0, 3,
                                             0, 0, 0, 0]
+                                    expect(state.score) == 48
                                 }
 
                                 context("when reduce with merge down index 0") {
@@ -373,6 +376,7 @@ class GameViewReactorSpec: QuickSpec {
                                                 0, 3, 0, 3,
                                                 0, 3, 0, 3,
                                                 0, 0, 0, 0]
+                                        expect(state.score) == 64
                                     }
                                 }
                             }

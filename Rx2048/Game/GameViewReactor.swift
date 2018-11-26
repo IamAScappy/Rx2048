@@ -107,6 +107,7 @@ class GameViewReactor: Reactor, Autowired {
             case .right:
                 for row in 0...3 {
                     if newState.tiles[row * 4 + index + 1].level == newState.tiles[row * 4 + index].level, newState.tiles[row * 4 + index] != .empty {
+                        newState.score += 2 << newState.tiles[row * 4 + index + 1].level
                         newState.tiles[row * 4 + index + 1].level += 1
                         newState.tiles[row * 4 + index] = .empty
                     }
@@ -114,6 +115,7 @@ class GameViewReactor: Reactor, Autowired {
             case .left where index > 0:
                 for row in 0...3 {
                     if newState.tiles[row * 4 + index - 1].level == newState.tiles[row * 4 + index].level, newState.tiles[row * 4 + index] != .empty {
+                        newState.score += 2 << newState.tiles[row * 4 + index - 1].level
                         newState.tiles[row * 4 + index - 1].level += 1
                         newState.tiles[row * 4 + index] = .empty
                     }
@@ -121,6 +123,7 @@ class GameViewReactor: Reactor, Autowired {
             case .up where index > 0:
                 for column in 0...3 {
                     if newState.tiles[column + (index - 1) * 4].level == newState.tiles[column + index * 4].level, newState.tiles[column + index * 4] != .empty {
+                        newState.score += 2 << newState.tiles[column + (index - 1) * 4].level
                         newState.tiles[column + (index - 1) * 4].level += 1
                         newState.tiles[column + index * 4] = .empty
                     }
@@ -128,6 +131,7 @@ class GameViewReactor: Reactor, Autowired {
             case .down:
                 for column in 0...3 {
                     if newState.tiles[column + (index + 1) * 4].level == newState.tiles[column + index * 4].level, newState.tiles[column + index * 4] != .empty {
+                        newState.score += 2 << newState.tiles[column + (index + 1) * 4].level
                         newState.tiles[column + (index + 1) * 4].level += 1
                         newState.tiles[column + index * 4] = .empty
                     }
