@@ -204,15 +204,15 @@ class GameViewReactorSpec: QuickSpec {
             }
 
             describe("reduce") {
+                var matrix: [Int]!
                 var state: State!
                 context("given matrix") {
-                    var matrix: [Int] = []
                     beforeEach {
                         matrix = [1, 0, 0, 0,
                                   0, 0, 0, 0,
                                   0, 0, 0, 0,
                                   1, 0, 0, 0]
-                        state = State(tiles: matrix.map { $0 == 0 ? .empty : Tile(id: NSUUID().uuidString, level: $0) })
+                        state = State(tiles: matrix.map { $0 == 0 ? .empty : Tile(id: NSUUID().uuidString, level: $0) }, score: 0)
                     }
 
                     context("when reduce with move right index 0 once") {
@@ -310,6 +310,72 @@ class GameViewReactorSpec: QuickSpec {
                                     0, 0, 0, 0,
                                     0, 0, 0, 0,
                                     0, 0, 0, 0]
+                        }
+                    }
+                }
+
+                context("given fulfilled matrix with level 1") {
+                    beforeEach {
+                        matrix = [1, 1, 1, 1,
+                                  1, 1, 1, 1,
+                                  1, 1, 1, 1,
+                                  1, 1, 1, 1]
+                        state = State(tiles: matrix.map { $0 == 0 ? .empty : Tile(id: NSUUID().uuidString, level: $0) }, score: 0)
+                    }
+
+                    context("when reduce with merge right index 0") {
+                        beforeEach {
+                            state = sut.reduce(state: state, mutation: .merge(direction: .right, index: 0))
+                        }
+
+                        it("result should be merged right once") {
+                            expect(state.tiles.map { $0.level })
+                                == [0, 2, 1, 1,
+                                    0, 2, 1, 1,
+                                    0, 2, 1, 1,
+                                    0, 2, 1, 1]
+                        }
+
+                        context("and reduce with merge right index 2") {
+                            beforeEach {
+                                state = sut.reduce(state: state, mutation: .merge(direction: .right, index: 2))
+                            }
+
+                            it("result should be merged right once") {
+                                expect(state.tiles.map { $0.level })
+                                    == [0, 2, 0, 2,
+                                        0, 2, 0, 2,
+                                        0, 2, 0, 2,
+                                        0, 2, 0, 2]
+                            }
+
+                            context("when reduce with merge up index 3") {
+                                beforeEach {
+                                    state = sut.reduce(state: state, mutation: .merge(direction: .up, index: 3))
+                                }
+
+                                it("result should be merged up once") {
+                                    expect(state.tiles.map { $0.level })
+                                        == [0, 2, 0, 2,
+                                            0, 2, 0, 2,
+                                            0, 3, 0, 3,
+                                            0, 0, 0, 0]
+                                }
+
+                                context("when reduce with merge down index 0") {
+                                    beforeEach {
+                                        state = sut.reduce(state: state, mutation: .merge(direction: .down, index: 0))
+                                    }
+
+                                    it("result should be merged down once") {
+                                        expect(state.tiles.map { $0.level })
+                                            == [0, 0, 0, 0,
+                                                0, 3, 0, 3,
+                                                0, 3, 0, 3,
+                                                0, 0, 0, 0]
+                                    }
+                                }
+                            }
                         }
                     }
                 }

@@ -39,6 +39,7 @@ class GameViewReactor: Reactor, Autowired {
 
     struct State {
         var tiles: [Tile] = Array<Tile>(repeating: .empty, count: 16)
+        var score: Int = 0
     }
 
     var initialState: State = State()
@@ -102,7 +103,38 @@ class GameViewReactor: Reactor, Autowired {
                 break
             }
         case .merge(let direction, let index):
-            break
+            switch direction {
+            case .right:
+                for row in 0...3 {
+                    if newState.tiles[row * 4 + index + 1].level == newState.tiles[row * 4 + index].level, newState.tiles[row * 4 + index] != .empty {
+                        newState.tiles[row * 4 + index + 1].level += 1
+                        newState.tiles[row * 4 + index] = .empty
+                    }
+                }
+            case .left where index > 0:
+                for row in 0...3 {
+                    if newState.tiles[row * 4 + index - 1].level == newState.tiles[row * 4 + index].level, newState.tiles[row * 4 + index] != .empty {
+                        newState.tiles[row * 4 + index - 1].level += 1
+                        newState.tiles[row * 4 + index] = .empty
+                    }
+                }
+            case .up where index > 0:
+                for column in 0...3 {
+                    if newState.tiles[column + (index - 1) * 4].level == newState.tiles[column + index * 4].level, newState.tiles[column + index * 4] != .empty {
+                        newState.tiles[column + (index - 1) * 4].level += 1
+                        newState.tiles[column + index * 4] = .empty
+                    }
+                }
+            case .down:
+                for column in 0...3 {
+                    if newState.tiles[column + (index + 1) * 4].level == newState.tiles[column + index * 4].level, newState.tiles[column + index * 4] != .empty {
+                        newState.tiles[column + (index + 1) * 4].level += 1
+                        newState.tiles[column + index * 4] = .empty
+                    }
+                }
+            default:
+                break
+            }
         }
         return newState
     }
